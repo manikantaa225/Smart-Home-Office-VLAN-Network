@@ -40,7 +40,8 @@ Devices automatically receive IP addresses.   <br>
 Router-on-a-Stick method implemented using sub-interfaces. <br>
 Each sub-interface assigned to one VLAN.  <br>
 
-  
+<img width="981" height="363" alt="Image" src="https://github.com/user-attachments/assets/3994d820-714b-4f09-a734-c8ef20d2a00e" />
+
 ## SSH Configuration
 SSH enabled on the router for secure remote management.    <br>
 Local user accounts configured with username & password.    <br>
