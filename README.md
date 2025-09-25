@@ -83,7 +83,7 @@ Router configured with DHCP pools for each VLAN.    <br>
 Devices automatically receive IP addresses.   <br>
 
 !      <br>
-DHCP Configuration       <br>
+
 
 ip dhcp pool vlan10     <br>
  network 192.168.1.0 255.255.255.0       <br>
