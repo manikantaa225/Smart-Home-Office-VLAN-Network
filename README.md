@@ -32,7 +32,6 @@ Switch ports assigned to respective VLANs.  <br>
 enable    <br>
 configure terminal    <br>
  
-VLAN Creation   <br>
 vlan 10       <br>
  name VLAN10_HOME     <br>
 vlan 20      <br>
@@ -42,17 +41,21 @@ vlan 30     <br>
 exit     <br>
 
 Assign Ports to VLANs    <br>
-interface fastEthernet0/1    <br>
+interface range fa0/3-4    <br>
+ switchport mode access    <br>
+ switchport access vlan 10     <br>
+
+interface range fa0/1   <br>
  switchport mode access    <br>
  switchport access vlan 10     <br>
 exit      <br>
 
-interface fastEthernet0/2    <br>
+interface fastEthernet0/5-7   <br>
  switchport mode access       <br>
  switchport access vlan 20           <br>
 exit     <br>
 
-interface fastEthernet0/3      <br>
+interface fastEthernet0/8-10      <br>
  switchport mode access       <br>
  switchport access vlan 30      <br>
 exit           <br>
