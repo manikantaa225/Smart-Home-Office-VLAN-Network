@@ -33,5 +33,14 @@ Switch ports assigned to respective VLANs.  <br>
 Router configured with DHCP pools for each VLAN.    <br>
 Devices automatically receive IP addresses.   <br>
 
+<img width="576" height="214" alt="Image" src="https://github.com/user-attachments/assets/2eea47a8-4edf-4ea9-b0a6-1150910ebd55" />
+<img width="799" height="355" alt="Image" src="https://github.com/user-attachments/assets/5d89125c-b0b0-456b-bec7-3fed35ae438e" />
+
+## SSH Configuration
+SSH enabled on the router for secure remote management.    <br>
+Local user accounts configured with username & password.    <br>
+
+
+
 
 
