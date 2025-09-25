@@ -23,7 +23,15 @@ VLAN 30 (Pink Zone) – Laptop2, Smartphone2, PC2, Printer2      <br>
 <img width="1912" height="806" alt="Image" src="https://github.com/user-attachments/assets/14c4a966-bbfe-4cd8-b281-c029e9e9c3cb" />
 
  ## Configurations
-1. VLAN Configuration   <br>
+## VLAN Configuration   <br>
 VLAN 10, VLAN 20, VLAN 30 created on the switch.  <br>
 Switch ports assigned to respective VLANs.  <br>
+
+<img width="973" height="323" alt="Image" src="https://github.com/user-attachments/assets/9adcb70b-3e9e-41a0-811b-88aecec0e84f" />
+
+ ## DHCP Configuration
+Router configured with DHCP pools for each VLAN.    <br>
+Devices automatically receive IP addresses.   <br>
+
+
 
