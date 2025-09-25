@@ -24,8 +24,52 @@ VLAN 30 (Pink Zone) – Laptop2, Smartphone2, PC2, Printer2      <br>
 
  ## Configurations
 ## VLAN Configuration   <br>
+
 VLAN 10, VLAN 20, VLAN 30 created on the switch.  <br>
 Switch ports assigned to respective VLANs.  <br>
+ 
+!       <br>
+enable    <br>
+configure terminal    <br>
+ 
+VLAN Creation   <br>
+vlan 10       <br>
+ name VLAN10_HOME     <br>
+vlan 20      <br>
+ name VLAN20_OFFICE     <br>
+vlan 30     <br>
+ name VLAN30_GUEST      <br>
+exit     <br>
+
+Assign Ports to VLANs    <br>
+interface fastEthernet0/1    <br>
+ switchport mode access    <br>
+ switchport access vlan 10     <br>
+exit      <br>
+
+interface fastEthernet0/2    <br>
+ switchport mode access       <br>
+ switchport access vlan 20           <br>
+exit     <br>
+
+interface fastEthernet0/3      <br>
+ switchport mode access       <br>
+ switchport access vlan 30      <br>
+exit           <br>
+!    <br>
+
+## TRUNK Configuration     <br>
+
+!      <br>
+Trunk Port        <br>
+interface fastEthernet0/24     <br>
+ switchport mode trunk      <br>
+ switchport trunk allowed vlan 10,20,30         <br>
+exit         <br>
+!         <br>
+
+
+
 
 <img width="973" height="323" alt="Image" src="https://github.com/user-attachments/assets/9adcb70b-3e9e-41a0-811b-88aecec0e84f" />
 
