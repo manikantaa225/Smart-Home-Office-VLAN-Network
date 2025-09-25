@@ -36,9 +36,17 @@ Devices automatically receive IP addresses.   <br>
 <img width="576" height="214" alt="Image" src="https://github.com/user-attachments/assets/2eea47a8-4edf-4ea9-b0a6-1150910ebd55" />
 <img width="799" height="355" alt="Image" src="https://github.com/user-attachments/assets/5d89125c-b0b0-456b-bec7-3fed35ae438e" />
 
+ ## Inter-VLAN Routing
+Router-on-a-Stick method implemented using sub-interfaces. <br>
+Each sub-interface assigned to one VLAN.  <br>
+
+  
 ## SSH Configuration
 SSH enabled on the router for secure remote management.    <br>
 Local user accounts configured with username & password.    <br>
+
+<img width="824" height="557" alt="Image" src="https://github.com/user-attachments/assets/3460774a-4a82-4153-ba20-d0f7ab5ec140" />
+<img width="951" height="127" alt="Image" src="https://github.com/user-attachments/assets/a4373593-0342-43de-869d-626ed7f616b4" />
 
 
 
