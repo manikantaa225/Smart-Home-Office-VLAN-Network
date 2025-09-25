@@ -77,12 +77,51 @@ exit         <br>
 Router configured with DHCP pools for each VLAN.    <br>
 Devices automatically receive IP addresses.   <br>
 
+!      <br>
+DHCP Configuration       <br>
+
+ip dhcp pool vlan10     <br>
+ network 192.168.1.0 255.255.255.0       <br>
+ default-router 192.168.1.1     <br>
+ dns-server 192.168.1.1       <br>
+
+ip dhcp pool vlan20        <br>
+ network 192.168.2.0 255.255.255.0     <br>
+ default-router 192.168.2.1       <br>
+ dns-server 192.168.2.1        <br>
+
+ip dhcp pool vlan30           <br>
+ network 192.168.3.0 255.255.255.0     <br>
+ default-router 192.168.3.1        <br>
+ dns-server 192.168.3.1       <br>
+ !
+ 
+
 <img width="576" height="214" alt="Image" src="https://github.com/user-attachments/assets/2eea47a8-4edf-4ea9-b0a6-1150910ebd55" />
 <img width="799" height="355" alt="Image" src="https://github.com/user-attachments/assets/5d89125c-b0b0-456b-bec7-3fed35ae438e" />
 
- ## Inter-VLAN Routing
+ ## Inter-VLAN Routing    <br>
 Router-on-a-Stick method implemented using sub-interfaces. <br>
 Each sub-interface assigned to one VLAN.  <br>
+
+!     <br>
+interface GigabitEthernet0/0       <br>
+ no ip address      <br>
+ duplex auto         <br>
+ speed auto      <br>
+
+interface GigabitEthernet0/0.10     <br>
+ encapsulation dot1Q 10        <br>
+ ip address 192.168.1.1 255.255.255.192     <br>
+
+interface GigabitEthernet0/0.20    <br>
+ encapsulation dot1Q 20      <br>
+ ip address 192.168.1.65 255.255.255.192      <br>
+
+interface GigabitEthernet0/0.30      <br>
+ encapsulation dot1Q 30        <br>
+ ip address 192.168.1.129 255.255.255.192    <br>
+!      <br>
 
 <img width="981" height="363" alt="Image" src="https://github.com/user-attachments/assets/3994d820-714b-4f09-a734-c8ef20d2a00e" />
 
@@ -90,8 +129,20 @@ Each sub-interface assigned to one VLAN.  <br>
 SSH enabled on the router for secure remote management.    <br>
 Local user accounts configured with username & password.    <br>
 
+ !      <br>      
+username mani password 0 mani@123     <br>
+ip domain-name mani.com      <br>
+crypto key generate rsa       <br>
+ip ssh version 2        <br>
+ 
+line vty 0 3       <br>
+ login local        <br>
+ transport input ssh       <br>
+
 <img width="824" height="557" alt="Image" src="https://github.com/user-attachments/assets/3460774a-4a82-4153-ba20-d0f7ab5ec140" />
 <img width="951" height="127" alt="Image" src="https://github.com/user-attachments/assets/a4373593-0342-43de-869d-626ed7f616b4" />
+
+
 
 
 
