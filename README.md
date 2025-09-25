@@ -61,6 +61,8 @@ interface fastEthernet0/8-10      <br>
 exit           <br>
 !    <br>
 
+<img width="973" height="323" alt="Image" src="https://github.com/user-attachments/assets/9adcb70b-3e9e-41a0-811b-88aecec0e84f" />    <br>
+
 ## TRUNK Configuration     <br>
 
 !      <br>
@@ -72,9 +74,9 @@ exit         <br>
 !         <br>
 
 
+<img width="790" height="233" alt="Image" src="https://github.com/user-attachments/assets/3544400b-f067-4687-8d0f-72b2128f0985" />   <br>
 
 
-<img width="973" height="323" alt="Image" src="https://github.com/user-attachments/assets/9adcb70b-3e9e-41a0-811b-88aecec0e84f" />
 
  ## DHCP Configuration
 Router configured with DHCP pools for each VLAN.    <br>
