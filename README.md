@@ -65,7 +65,7 @@ exit           <br>
 
 !      <br>
 Trunk Port        <br>
-interface fastEthernet0/24     <br>
+interface fa0/2     <br>
  switchport mode trunk      <br>
  switchport trunk allowed vlan 10,20,30         <br>
 exit         <br>
@@ -115,15 +115,15 @@ interface GigabitEthernet0/0       <br>
 
 interface GigabitEthernet0/0.10     <br>
  encapsulation dot1Q 10        <br>
- ip address 192.168.1.1 255.255.255.192     <br>
+ ip address 192.168.1.1 255.255.255.0    <br>
 
 interface GigabitEthernet0/0.20    <br>
  encapsulation dot1Q 20      <br>
- ip address 192.168.1.65 255.255.255.192      <br>
+ ip address 192.168.2.1 255.255.255.0     <br>
 
 interface GigabitEthernet0/0.30      <br>
  encapsulation dot1Q 30        <br>
- ip address 192.168.1.129 255.255.255.192    <br>
+ ip address 192.168.3.1 255.255.255.0    <br>
 !      <br>
 
 <img width="981" height="363" alt="Image" src="https://github.com/user-attachments/assets/3994d820-714b-4f09-a734-c8ef20d2a00e" />
