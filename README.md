@@ -103,6 +103,12 @@ ip dhcp pool vlan30           <br>
  
 
 <img width="576" height="214" alt="Image" src="https://github.com/user-attachments/assets/2eea47a8-4edf-4ea9-b0a6-1150910ebd55" />
+
+## Verification
+Objective:  <br>
+confirm automatic IP address assignment for devices in VLANs   <br>
+Verification command :        <br>
+1) show ip dhcp binding ~ It will show all leased IPs       <br>
 <img width="799" height="355" alt="Image" src="https://github.com/user-attachments/assets/5d89125c-b0b0-456b-bec7-3fed35ae438e" />
 
  ## Inter-VLAN Routing    <br>
