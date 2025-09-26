@@ -61,7 +61,7 @@ interface fastEthernet0/8-10      <br>
 exit           <br>
 !    <br>
 
-<img width="973" height="323" alt="Image" src="https://github.com/user-attachments/assets/9adcb70b-3e9e-41a0-811b-88aecec0e84f" />    <br>
+
 
 ## TRUNK Configuration     <br>
 
@@ -72,10 +72,6 @@ interface fa0/2     <br>
  switchport trunk allowed vlan 10,20,30         <br>
 exit         <br>
 !         <br>
-
-
-<img width="790" height="233" alt="Image" src="https://github.com/user-attachments/assets/3544400b-f067-4687-8d0f-72b2128f0985" />   <br>
-
 
 
  ## DHCP Configuration
@@ -104,14 +100,10 @@ ip dhcp pool vlan30           <br>
 
 <img width="576" height="214" alt="Image" src="https://github.com/user-attachments/assets/2eea47a8-4edf-4ea9-b0a6-1150910ebd55" />
 
-## Verification
-Objective:  <br>
-confirm automatic IP address assignment for devices in VLANs   <br>
-Verification command :        <br>
-1) show ip dhcp binding ~ It will show all leased IPs       <br>
-<img width="799" height="355" alt="Image" src="https://github.com/user-attachments/assets/5d89125c-b0b0-456b-bec7-3fed35ae438e" />
+
 
  ## Inter-VLAN Routing    <br>
+ 
 Router-on-a-Stick method implemented using sub-interfaces. <br>
 Each sub-interface assigned to one VLAN.  <br>
 
@@ -134,7 +126,7 @@ interface GigabitEthernet0/0.30      <br>
  ip address 192.168.3.1 255.255.255.0    <br>
 !      <br>
 
-<img width="981" height="363" alt="Image" src="https://github.com/user-attachments/assets/3994d820-714b-4f09-a734-c8ef20d2a00e" />
+
 
 ## SSH Configuration
 SSH enabled on the router for secure remote management.    <br>
@@ -150,12 +142,69 @@ line vty 0 3       <br>
  login local        <br>
  transport input ssh       <br>
 
+
+
+
+## Verification
+
+## VLAN Verification
+
+Objective: <br>
+Confirm VLANs are properly created, assigned to switch ports, and allowed on trunk links to ensure correct network segmentation. <br>
+
+Verification : <br>
+1) show vlan brief  ~ It will show all VLANs and their assigned interfaces. <br>
+2) show interfaces trunk  ~ It will show VLANs allowed on trunk links. <br>
+3) show ip interface brief  ~ It will show VLAN interfaces (SVIs) status and IP addresses. <br>
+4) ping <destination-IP>  ~ To verify connectivity between devices in the same or different VLANs. <br>
+
+<img width="973" height="323" alt="Image" src="https://github.com/user-attachments/assets/9adcb70b-3e9e-41a0-811b-88aecec0e84f" />     <br>
+
+### TRUNK Verification  
+Objective: <br>
+Confirm trunk ports are configured properly and carrying the required VLANs. <br>  
+
+Verification : <br>  
+1) show interfaces trunk  ~ It will show trunk ports and allowed VLANs. <br>  
+2) show running-config  ~ It will show trunk configuration on interfaces. <br>  
+3) ping <IP-of-device-in-another-VLAN>  ~ To verify inter-VLAN communication across trunk. <br>
+
+<img width="790" height="233" alt="Image" src="https://github.com/user-attachments/assets/3544400b-f067-4687-8d0f-72b2128f0985" />   <br>
+
+
+## DHCP Verification
+Objective:  <br>
+confirm automatic IP address assignment for devices in VLANs   <br>
+Verification command :        <br>
+1) show ip dhcp binding ~ It will show all leased IPs       <br>
+
+<img width="799" height="355" alt="Image" src="https://github.com/user-attachments/assets/5d89125c-b0b0-456b-bec7-3fed35ae438e" />
+
+## Inter-VLAN Routing Verification  <br>
+
+Objective: <br>
+Confirm that devices in different VLANs can communicate with each other through a Layer 3 device (Router-on-a-Stick or Layer 3 Switch). <br>  
+
+Verification : <br>  
+1) show ip interface brief  ~ It will show VLAN interfaces (SVIs) or router sub-interfaces with their IP addresses and status. <br>  
+2) show running-config  ~ It will show IP addressing and routing configuration for inter-VLAN communication. <br>  
+3) ping <IP-of-device-in-another-VLAN>  ~ To verify communication across VLANs. <br>  
+4) traceroute <IP-of-device-in-another-VLAN>  ~ To confirm the Layer 3 path between VLANs. <br>
+
+<img width="981" height="363" alt="Image" src="https://github.com/user-attachments/assets/3994d820-714b-4f09-a734-c8ef20d2a00e" />
+
+## SSH Verification  
+
+Objective: <br>
+Confirm that SSH is enabled and remote login is working securely. <br>  
+
+Verification : <br>  
+1) show ip ssh  ~ It will show SSH status and version. <br>  
+2) show running-config  ~ To verify SSH is enabled under vty lines. <br>  
+3) ssh -l admin <device-IP>  ~ Test SSH login from another device/PC. <br>
+
 <img width="824" height="557" alt="Image" src="https://github.com/user-attachments/assets/3460774a-4a82-4153-ba20-d0f7ab5ec140" />
 <img width="951" height="127" alt="Image" src="https://github.com/user-attachments/assets/a4373593-0342-43de-869d-626ed7f616b4" />
-
-
-
-
 
 
 
